@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+#DivOne{
+  height: 300px;
+  width: 600px;
+  background-color:red;
+}
