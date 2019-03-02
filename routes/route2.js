@@ -10,9 +10,7 @@ router.get('/all', (req, res) => {
 });
 
 router.get('/:color', (req, res) => {
-   // res.render('route2');
-   // console.log(req.params.color);
-   // res.status(200).json(colors.colors[2]);
+  
    const userColor = req.params.color.toLowerCase();
    console.log(userColor);
    const availableColors = {
@@ -26,7 +24,7 @@ router.get('/:color', (req, res) => {
 
    if (availableColors[userColor] || userColor === 'black') {
      const target = availableColors[userColor]
-     res.status(200).json(colors.colors[0]);
+     res.status(200).json(colors.colors[target]);
    } else {
      res.status(404).json({message: "Not found"});
    }
